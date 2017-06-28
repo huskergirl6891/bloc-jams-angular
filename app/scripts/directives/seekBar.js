@@ -48,7 +48,6 @@
                scope.$apply(function() {
                  scope.value = percent * scope.max;
                });
-
              });
 
              $document.bind('mouseup.thumb', function() {

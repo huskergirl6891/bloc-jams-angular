@@ -45,7 +45,6 @@
             currentBuzzObject.pause();
             song.playing = false;
           };
-
           return SongPlayer;
      }
 

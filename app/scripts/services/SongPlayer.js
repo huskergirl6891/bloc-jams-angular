@@ -85,6 +85,12 @@
           SongPlayer.currentTime = null;
 
           /**
+          * @desc Current volume (scale of 0 - 100)
+          * @type {Number}
+          */
+          SongPlayer.volume = 80;
+
+          /**
           * @function SongPlayer.play
           * @desc Checks if current song is same as clicked song and changes music/buttons accordingly
           * @param {Object} song
@@ -153,6 +159,17 @@
           SongPlayer.setCurrentTime = function(time) {
             if (currentBuzzObject) {
               currentBuzzObject.setTime(time);
+            }
+          };
+
+          /**
+          * @function setVolume
+          * @desc Sets current volume based upon mouse click location
+          * @param {Object} song
+          */
+          SongPlayer.setVolume = function(volume) {
+            if (currentBuzzObject) {
+              currentBuzzObject.setVolume(volume);
             }
           };
 

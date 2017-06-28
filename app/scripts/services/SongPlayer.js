@@ -1,7 +1,6 @@
 (function() {
      function SongPlayer() {
           var SongPlayer = {};
-
           var currentSong = null;
 
           /**
@@ -19,7 +18,6 @@
             if (currentBuzzObject) {
               currentBuzzObject.stop();
               currentSong.playing = null;
-              console.log("currentSong = " + currentSong);
             }
 
             currentBuzzObject = new buzz.sound(song.audioUrl, {

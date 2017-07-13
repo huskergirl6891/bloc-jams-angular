@@ -171,7 +171,27 @@
             if (currentBuzzObject) {
               currentBuzzObject.setVolume(volume);
             }
+            SongPlayer.volume = volume;
           };
+
+          SongPlayer.muteVolume = function() {
+            if (currentBuzzObject) {
+              currentBuzzObject.setVolume(0);
+            }
+            SongPlayer.previousVolume = SongPlayer.volume;
+            SongPlayer.volume = 0;
+            SongPlayer.volume.isMute = null;
+          };
+
+          SongPlayer.unmuteVolume = function() {
+            if (currentBuzzObject) {
+              currentBuzzObject.setVolume(SongPlayer.previousVolume);
+            }
+            SongPlayer.volume = SongPlayer.previousVolume;
+            SongPlayer.volume.isMute = true;
+          }
+
+          SongPlayer.volume.isMute = true;
 
           return SongPlayer;
      }

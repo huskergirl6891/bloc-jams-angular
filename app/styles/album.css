@@ -45,12 +45,44 @@
  }
 
  .song-item-title {
-     width: 85%;
+     width: 75%;
  }
 
  .song-item-duration {
      width: 5%;
  }
+
+ .song-item-rating {
+     width: 15%;
+     font: 10px verdana, sans-serif;
+     margin: 0 auto 40px auto;
+
+ }
+
+ .rate_widget {
+
+     overflow:   visible;
+     padding:    8px;
+     position:   relative;
+     width:      180px;
+     height:     32px;
+ }
+ .ratings_stars {
+     background: url('/assets/images/star-off.svg') no-repeat;
+     float:      left;
+     height:     28px;
+     padding:    1.5px;
+     width:      25px;
+ }
+ .ratings_vote {
+     background: url('/assets/images/star-on.svg') no-repeat;
+ }
+
+ .ratings_over {
+     background: url('/assets/images/star-on.svg') no-repeat;
+ }
+
+
 
  .album-song-button {
      text-align: center;
@@ -71,6 +103,36 @@
 
  .album-song-button span {
      line-height: 28px;
+ }
+
+ /* Tooltip container */
+ .tooltip {
+     position: relative;
+     display: inline-block;
+ }
+
+ /* Tooltip text */
+ .tooltip .tooltiptext {
+     visibility: hidden;
+     width: 50px;
+     background-color: black;
+     color: #fff;
+     text-align: center;
+     padding: 5px 0;
+     border-radius: 6px;
+     font-size: 0.6rem;
+
+     /* Position the tooltip text - see examples below! */
+     position: absolute;
+     z-index: 1;
+     top: 100%;
+     left: 75%;
+     margin-left: -30px;
+ }
+
+ /* Show the tooltip text when you mouse over the tooltip container */
+ .tooltip:hover .tooltiptext {
+     visibility: visible;
  }
 
  @media (max-width: 640px) and (min-width: 320px) {

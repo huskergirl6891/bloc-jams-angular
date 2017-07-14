@@ -40,6 +40,12 @@
               });
             });
 
+            currentBuzzObject.bind('ended', function() {
+              $rootScope.$apply(function() {
+                SongPlayer.next();
+              });
+            });
+
             SongPlayer.currentSong = song;
           };
 
@@ -59,7 +65,7 @@
           * @param {Object} song
           */
           var stopSong = function(song) {
-            currentBuzzObject.stop();
+            currentBuzzObject.pause();
             SongPlayer.currentSong.playing = null;
           };
 
